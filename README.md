@@ -1,6 +1,6 @@
 # alumni_dav
 
-App developed with Jquery-Mobile
+App developed with jQuery Mobile
 
 App to help the student
 
