@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<title>AlumniDav</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Oswald" rel="stylesheet">
+	    <link rel="stylesheet" href="css/estilos_mobile.css" >
+	    <link rel="stylesheet" href="css/estilos_tablet.css" media="screen and (min-width: 500px)" />
+	    <link rel="stylesheet" href="css/estilos_desktop.css" media="screen and (min-width: 900px)" />
+	</head>
+	<body>
+		<header>
+			<h1>AlumniDav</h1>
+		</header>
+		<nav id="menu">
+			<ul id="iconos">
+				<li>
+					<a href="#menu">abrir</a>
+				</li>
+				<li>
+					<a href="#">cerrar</a>
+				</li>
+			</ul>
+			<ul id="botones">
+				<li>
+					<a href="#inicio">inicio</a>
+				</li>
+				<li>
+					<a href="#caracteristicas">características</a>
+				</li>
+				<li>
+					<a href="#descarga">descarga</a>
+				</li>
+				<li>
+					<a href="#contacto">contacto</a>
+				</li>
+			</ul>
+		</nav>
+		<main>
+			<section>
+				<figure class="figure-overlay">
+					<picture>
+						<source media="(min-width: 900px)" srcset="img/banner.jpg" />
+						<img src="img/banner_mobile.jpg" alt="Banner AlumniDav" />
+					</picture>
+				</figure>
+			</section>
+			<section id="inicio">
+				<h2 class="sectionTitle">Bienvenido</h2>
+				<article>
+					<h1>¿Qué es alumniDav?</h1>
+					<div class="videoApp">
+	    				<iframe src="https://www.youtube.com/embed/ButZtw7c3y4" allowfullscreen></iframe>
+					</div>
+					<p>AlumniDav es una aplicación mobile para alumnos de la escuela Da Vinci, que permite <em>tener un control
+					de los parciales que vas rindiendo </em>, para que no se te solapen las fechas.También posee <em>tests</em> para probar
+					tus conocimientos con las materias esenciales de la carrera</p>
+				</article>
+			</section>
+			<section id="caracteristicas">
+				<h2 class="sectionTitle">Características</h2>
+				<div>
+					<article>
+					<h1>Seguimiento</h1>
+					<picture>
+						<source media="(min-width: 900px)" srcset="img/proximas_fechas_pc.jpg" />
+						<img src="img/proximas_fechas.jpg" alt="Proximas fechas , feature" />
+					</picture>
+					<p>Con alumniDav vas a poder tener un seguimiento
+					de cuando rendís ,deja de anotar en un papel o en una hoja.</p>
+				</article>	
+				<article>
+					<h1>Test de conocimiento</h1>
+					<picture>
+						<source media="(min-width: 900px)" srcset="img/test_pc.jpg" />
+						<img src="img/test.jpg" alt="Test conocimiento, feature" />
+					</picture>
+					<p>Pon a prueba tus conocimientos de HTML y CSS , con el cuestionario de preguntas
+					aleatorias.</p>
+				</article>	
+				<article>
+					<h1>Tips de estudio</h1>
+					<picture>
+						<source media="(min-width: 900px)" srcset="img/consejos_utiles_pc.jpg" />
+						<img src="img/consejos_utiles.jpg" alt="Consejos utiles, feature" />
+					</picture>
+					<p>¿Te cuesta estudiar? , te detallamos los mejores tips para que saques mejores notas.</p>
+				</article>		
+				</div>	
+			</section>
+			<section id="descarga">
+				<h2 class="sectionTitle">Descarga</h2>
+				<div class="conteinerDescarga">
+					<article>
+						<picture>
+							<source media="(min-width: 900px)" srcset="img/android.png" />
+							<a href="AlumniDav.apk"><img src="img/android.png" alt="Descargar app android" /></a>
+						</picture>
+						<h3>Android</h3>
+					</article>
+					<article>
+						<picture>
+							<source media="(min-width: 900px)" srcset="img/ios.png" />
+							<a href="AlumniDav.apk"><img src="img/ios.png" alt="Descargar app ios" /></a>
+						</picture>
+						<h3>iOS</h3>
+					</article>
+				</div>
+			</section>
+		</main>
+		<footer id="contacto">
+			<h2 class="sectionTitle">Contacto</h2>
+			<form id="formEntrada" method="post" action="#">
+				<label class="badgeForm">Nombre</label>
+				<input type="text" placeholder="Ingrese su nombre" name="nombre" required />
+				<label class="badgeForm">Apellido</label>
+				<input type="text" placeholder="Ingrese su apellido" name="apellido" />
+				<label class="badgeForm">Email</label>
+				<input type="email" placeholder="ejemplo@gmail.com" name="email" required />	
+				<label class="badgeForm">Comentario</label>
+				<textarea placeholder="Escribir comentario" name="comentario" required></textarea> 	
+				<input type="submit" value="Enviar" />				
+			</form>	
+			<div id="contenedorRedesSocialesPC">
+				<div id="contenedorRedesSociales">
+					<p>Seguinos</p>
+					<div>
+						<a href="#" title="Facebook" id="facebook-link"></a>
+						<a href="#" title="Twitter" id="twitter-link"></a>
+						<a href="#" title="Instagram" id="instagram-link"></a>
+						<a href="#" title="Youtube" id="youtube-link"></a>
+					</div>
+				</div>
+				<div id="datosAlumno">
+					<ul>
+						<li>Torre Matias</li>
+						<li>DWN2A</li>
+						<li>2do cuatrimestre 2017</li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

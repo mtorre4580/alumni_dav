@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+      <meta charset="UTF-8">
+      <title>AlumniDav</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="lib/jqm/jquery.mobile-1.4.5.css">
+      <script src="lib/jqm/jquery-1.12.3.min.js"></script>
+      <script src="lib/jqm/jquery.mobile-1.4.5.js"></script>
+      <link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Oswald" rel="stylesheet">
+      <link rel="stylesheet" href="css/estilos.css">
+  </head>
+  <body>
+      <!-- PAGINA PROXIMAS FECHAS -->
+      <div data-role="page" id="proximasFechas">
+          <div data-role="header" data-position="fixed">
+              <h1>Próximas fechas</h1>
+              <a href="#menuProximasFechas"
+                 data-role="button" 
+                 data-icon="menu" 
+                 data-iconpos="notext" 
+                 class="ui-btn-left ui-nodisc-icon"
+                 data-rel="open">Menu</a>
+              <div class="ui-btn-right">
+                 <a href="#"
+                    id="borrar"
+                    data-role="button" 
+                    data-icon="borrar" 
+                    data-iconpos="notext" 
+                    class="ui-nodisc-icon"
+                    data-rel="open">Borrar</a>
+                 <a href="#agregarParcialFinal"
+                    data-role="button" 
+                    data-icon="agregar" 
+                    data-iconpos="notext" 
+                    class="ui-nodisc-icon"
+                    data-rel="open">Eliminar</a>
+              </div>
+          </div>
+          <div role="main" class="ui-content" style="padding:0">
+              <div id="tabs" data-role="tabs"> 
+                <div data-role="navbar">  
+                  <ul>
+                    <li><a class="ui-btn-active ui-nodisc-icon" href="#parciales">Parciales</a></li>
+                    <li><a class="ui-nodisc-icon" href="#finales">Finales</a></li>
+                  </ul>
+                </div>
+                <section id="parciales">  
+                  <h2 class="tituloSection">Parciales que rindo</h2>
+                  <div id="mainParciales"></div>
+                </section>
+                <section id="finales"> 
+                  <h2 class="tituloSection">Finales que rindo</h2>
+                  <div id="mainFinales"></div>
+                </section>
+              </div>
+          </div>
+          <div id="menuProximasFechas"
+              data-role="panel" 
+              data-display="reveal" 
+              data-position="left">
+              <ul data-role="listview" data-icon="derecha" class="ui-nodisc-icon">
+                  <li data-role="list-divider" role="heading" class="headerMenu"><span>AlumniDav</span></li>
+                  <li class="ui-btn-active"><a href="#proximasFechas">Próximas fechas</a></li>
+                  <li><a data-transition="fade" href="#test">Test</a></li>
+                  <li><a data-transition="fade" href="#consejos">Consejos útiles</a></li>
+                  <li><a data-transition="fade" href="#info">Info</a></li>
+                  <li><a href="#">Salir</a></li>
+              </ul>
+          </div>
+      </div>
+      <!-- PAGINA AGREGAR NOTA / FINAL -->
+       <div data-role="page" id="agregarParcialFinal">
+          <div data-role="header" data-position="fixed">
+              <h1>Agregar</h1>
+              <a href="#proximasFechas"
+                 data-role="button" 
+                 data-icon="volver" 
+                 data-iconpos="notext" 
+                 class="ui-btn-left ui-nodisc-icon"
+                 data-rel="open">Volver</a>
+          </div>
+          <div role="main" class="ui-content">
+              <form id="formAgregar">
+                <label for="materia">Materia</label>
+                <input type="text" name="materia" id="materia" required />
+                <label for="fecha">Fecha</label>
+                <input type="date" name="fecha" id="fecha" required />
+                <label for="descripcion">Descripción</label>
+                <textarea cols="40" rows="8" name="textarea" id="descripcion"></textarea>
+                <fieldset id="tipo" data-role="controlgroup" data-type="horizontal" data-mini="true">
+                  <legend>Tipo</legend>
+                  <input type="radio" name="tipo" id="parcial" value="Parcial" checked>
+                  <label for="parcial">Parcial</label>
+                  <input type="radio" name="tipo" id="final" value="Final">
+                  <label for="final">Final</label>
+                </fieldset>
+                <div style="padding-top:1em;"> 
+                  <input type="submit" data-theme="a" value="Aceptar" />
+                  <a href="#proximasFechas" data-role="button">Cancelar</a>
+                </div>
+              </form>
+          </div>
+      </div>
+      <!-- PAGINA TEST -->
+      <div data-role="page" id="test">
+          <div data-role="header" data-position="fixed">
+              <h1>Test</h1>
+              <a href="#menuTest"
+                 data-role="button" 
+                 data-icon="menu" 
+                 data-iconpos="notext" 
+                 class="ui-btn-left ui-nodisc-icon"
+                 data-rel="open">Menu</a>
+              <a id="jugar" 
+                 href="#"
+                 data-role="button" 
+                 data-icon="spinner" 
+                 data-iconpos="notext" 
+                 class="ui-btn-right ui-nodisc-icon"
+                 data-rel="open">Jugar</a>
+          </div>
+          <div id="sectionPreguntas" role="main" class="ui-content">
+              <form id="formPregunta"></form>
+              <div id="resultadoPregunta"></div>
+          </div>
+          <div id="menuTest"
+               data-role="panel" 
+               data-display="reveal" 
+               data-position="left">
+              <ul data-role="listview" data-icon="derecha" class="ui-nodisc-icon">
+                  <li data-role="list-divider" role="heading" class="headerMenu"><span>AlumniDav</span></li>
+                  <li><a data-transition="fade" href="#proximasFechas">Próximas fechas</a></li>
+                  <li class="ui-btn-active"><a data-transition="fade" href="#test">Test</a></li>
+                  <li><a data-transition="fade" href="#consejos">Consejos útiles</a></li>
+                  <li><a data-transition="fade" href="#info">Info</a></li>
+                  <li><a data-transition="fade" href="#">Salir</a></li>
+              </ul>
+          </div>
+      </div>
+      <!-- PAGINA CONSEJOS UTILES -->
+      <div data-role="page" id="consejos">
+          <div data-role="header" data-position="fixed">
+              <h1>Consejos</h1>
+              <a href="#menuInicio"
+                 data-role="button" 
+                 data-icon="menu" 
+                 data-iconpos="notext" 
+                 class="ui-btn-left ui-nodisc-icon"
+                 data-rel="open">Menu</a>
+          </div>
+          <div role="main" class="ui-content">
+            <h2 id="fondoConsejos">Consejos útiles</h2>
+            <p class="titleConsejos">Mejora tus habilidades de estudio</p>
+            <section 
+              id="sectionTips"
+              class="ui-nodisc-icon" 
+              data-role="collapsible-set" 
+              data-iconpos="right" 
+              data-inset="false" 
+              data-collapsed-icon="abajo" 
+              data-expanded-icon="arriba"> 
+                <div class="tipsDetalle" data-role="collapsible">
+                    <h3>Crear ambiente</h3>
+                    <p>Reduce el ruido al mínimo aunque también se aconseja escuchar música en volumen bajo como sonido ambiente.</p>
+                </div>
+                <div class="tipsDetalle" data-role="collapsible">
+                    <h3>Cierra la puerta</h3>
+                    <p>Esto te aislará de posibles distracciones.</p>
+                </div>
+                <div class="tipsDetalle" data-role="collapsible">
+                    <h3>Desconéctate</h3>
+                     <p>Libérate de todos los aparatos electrónicos que no te sirvan al momento de tomar los libros. Esto significa desconectar el móvil, apagar la TV y si no necesitas acceso a internet también salir del Wi-Fi.</p>
+                </div>
+                <div class="tipsDetalle" data-role="collapsible">
+                    <h3>Distracciones</h3>
+                     <p>Si no te rinde estudiar en casa porque las distracciones son demasiadas, prueba ir a la biblioteca, a un café o hasta al banco de un parque. Cualquier lugar en el que puedas lograr concentrarte es bueno.</p>
+                </div>
+                <div class="tipsDetalle" data-role="collapsible">
+                    <h3>Organízate</h3>
+                     <p>Organiza tu trabajo en segmentos de tiempo y utiliza siempre una agenda o planificador. Estos compromisos temporales te ayudarán a mantenerte enfocado en tu tarea evitando dejar las cosas para después.</p>
+                </div>
+                <div class="tipsDetalle" data-role="collapsible">
+                    <h3>Toma nota</h3>
+                     <p>Cada vez que un pensamiento ajeno al estudio ronde tu cabeza anótalo en un papel. Es tan simple como escribir: “Recordar pasear al perro”. Esto sacará la distracción de tu cabeza al papel.</p>
+                </div>
+                <div class="tipsDetalle" data-role="collapsible">
+                    <h3>Adiós a las redes sociales</h3>
+                    <p>Cuando necesites utilizar internet para hacer investigaciones, imponte reglas firmes acerca del uso de la red. Esto significa decirle no a sitios como Facebook, Twitter, YouTube o cualquier otro que pueda distraerte de tu tarea.</p>
+                </div>
+                <div class="tipsDetalle" data-role="collapsible">
+                    <h3> Tiempo libre</h3>
+                     <p>Cuando sientas que has progresado en el estudio, recompensate con tiempo libre. Aquí es cuando puedes permitirte todas las recreaciones libre de culpa. El balance en tu vida es saludable. Sólo asegúrate de volver a los libros cuando tu calendario personal así lo indique.</p>
+                </div>
+              </section>
+          </div>
+          <div id="menuInicio"
+              data-role="panel" 
+              data-display="reveal" 
+              data-position="left">
+              <ul data-role="listview" data-icon="derecha" class="ui-nodisc-icon">
+                  <li data-role="list-divider" role="heading" class="headerMenu"><span>AlumniDav</span></li>
+                  <li><a data-transition="fade" href="#proximasFechas">Próximas fechas</a></li>
+                  <li><a data-transition="fade" href="#test">Test</a></li>
+                  <li class="ui-btn-active"><a data-transition="fade" href="#consejos">Consejos útiles</a></li>
+                  <li><a data-transition="fade" href="#info">Info</a></li>
+                  <li><a href="#">Salir</a></li>
+              </ul>
+          </div>
+      </div>
+      <!-- PAGINA INFO -->
+      <div data-role="page" id="info">
+          <div data-role="header" data-position="fixed">
+              <h1>Info</h1>
+              <a href="#menuInfo"
+                 data-role="button" 
+                 data-icon="menu" 
+                 data-iconpos="notext" 
+                 class="ui-btn-left ui-nodisc-icon"
+                 data-rel="open">Menu</a>
+          </div>
+          <div role="main" class="ui-content">
+              <h2 class="tituloSection">¿Cómo surgió?</h2>
+              <p class="parrafoDetalleAl">
+                Por la cantidad de materias que cursamos , conviene tener bien anotado los días que rendimos, ya sea finales o parciales.
+              </p>
+              <p class="parrafoDetalleAl">
+                Prueba tus habilidades con el test random de preguntas de HTML y CSS
+              </p>
+              <h2 class="tituloSection">Información</h2>
+              <p class="parrafoDetalleAl">
+                Aplicación mobile realizada para interacción dispositivos móviles, tecnologías HTML,CSS,JS,JQUERY </br>
+                Se uso <em>localStorage</em> , para guardar las preguntas aleatorias, notas y finales
+              </p>
+              <div id="centrar">
+                <a  href="#informacionAlumno" 
+                    class="ui-nodisc-icon"
+                    data-rel="popup" 
+                    data-position-to="window" 
+                    data-theme="a" 
+                    data-icon="info"
+                    data-iconpos="left" 
+                    data-role="button"
+                    data-inline="true"
+                    data-transition="pop">Detalle Alumno</a>
+              </div>
+              <div id="informacionAlumno" data-role="popup">
+                  <div data-role="header">
+                      <a href="#" data-rel="back" 
+                           data-role="button" 
+                           data-icon="delete" 
+                           data-iconpos="notext" 
+                           class="ui-btn-right">Cerrar</a>
+                  </div>
+                  <div role="main" class="ui-content">
+                      <ul data-role="listview">
+                          <li><span class="infoAL">Alumno:</span> Matias Daniel Torre</li>
+                          <li><span class="infoAL">Final:</span> Interacción dispositivos móviles</li>
+                          <li><span class="infoAL">Curso:</span> DWN2A</li>
+                          <li><span class="infoAL">Año:</span> 2017</li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+          <div id="menuInfo"
+              data-role="panel" 
+              data-display="reveal" 
+              data-position="left">
+              <ul data-role="listview" data-icon="derecha" class="ui-nodisc-icon">
+                  <li data-role="list-divider" role="heading" class="headerMenu"><span>AlumniDav</span></li>
+                  <li><a data-transition="fade" href="#proximasFechas">Próximas fechas</a></li>
+                  <li><a data-transition="fade" href="#test">Test</a></li>
+                  <li><a data-transition="fade" href="#consejos">Consejos útiles</a></li>
+                  <li class="ui-btn-active"><a data-transition="fade" href="#info">Info</a></li>
+                  <li><a href="#">Salir</a></li>
+              </ul>
+          </div>
+      </div>
+      <!-- SCRIPT CON LA LOGICA DE JQUERY MOBILE -->
+      <script src="js/main.js"></script>
+      <!-- SCRIPT DONDE DEFINO EL ARRAY DE PREGUNTAS -->
+      <script src="js/preguntas.js"></script>
+  </body>
+</html>

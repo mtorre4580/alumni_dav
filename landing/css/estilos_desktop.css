@@ -1,0 +1,60 @@
+#botones li a:hover{
+	background-color: #01579B;
+	cursor: pointer;
+}
+.figure-overlay:first-child{
+	display: block;
+}
+#caracteristicas div{
+	display: flex;
+}
+#caracteristicas div article{
+	width: 50%;
+}
+#iconos{
+	display: none;
+}
+header,nav{
+	position: static;
+	width: 80%
+}
+header,main,footer,nav{
+	width: 80%;
+	margin: auto;
+}
+#botones{
+	position: initial;
+    display: flex;
+    justify-content: space-around;
+}
+#botones li{
+	display: inline-block;
+	text-align: center;
+	padding: 0;
+	font-size: 18px;
+	width: 50%;
+	border-radius: 0;
+}
+#botones li a{
+	background: transparent;
+}
+#contenedorRedesSocialesPC{
+	display: flex ;
+	justify-content: space-around;
+	flex-flow: row ;
+	flex-direction: row-reverse;
+}
+#contenedorRedesSociales{
+	width: 50%;
+	background-color: #212121;
+}
+#datosAlumno{
+	width: 50%;
+}
+#formEntrada textarea{
+	padding-top: 3em;
+	padding-bottom: 3em;
+}
+input[type=text],input[type=email],textarea,input[type="submit"]{
+	font-size: 18px; 
+}

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns = "http://www.w3.org/ns/widgets" xmlns:gap = "http://phonegap.com/ns/1.0" id = "com.marinearg.app" version = "1.0.0">
+    <name>AlumniDav</name>
+    <description>Aplicación AlumniDav para alumnos de davinci</description>
+    <author href="http://www.davinci.edu.ar" email="mtorre4580@outlook.com">Matias Daniel Torre</author>
+	<platform name="android" />
+    <preference name="permissions" value="none"/>
+	<preference name="phonegap-version" value="cli-6.5.0" />	
+    <preference name="orientation" value="portrait" /> 	
+    <preference name="target-device" value="universal" /> 	
+    <preference name="fullscreen" value="false" /> 	
+    <preference name="webviewbounce" value="false" /> 	
+    <preference name="prerendered-icon" value="true" /> 	
+    <preference name="stay-in-webview" value="false" /> 	
+    <preference name="ios-statusbarstyle" value="black-opaque" /> 	
+    <preference name="detect-data-types" value="true" /> 	
+    <preference name="exit-on-suspend" value="false" /> 	
+    <preference name="show-splash-screen-spinner" value="true" /> 	
+    <preference name="auto-hide-splash-screen" value="true" /> 	
+    <preference name="android-minSdkVersion" value="7" /> 	
+    <preference name="android-installLocation" value="auto" /> 
+	<preference name="splashScreenDelay" value="6000" />
+    <plugin name="cordova-plugin-whitelist" source="npm" spec="*"/>
+	<plugin name="cordova-plugin-splashscreen" source="npm" />
+	<plugin name="cordova-plugin-statusbar" source="npm"/>
+	<preference name="StatusBarOverlaysWebView" value="false" />
+    <preference name="StatusBarBackgroundColor" value="#1565C0" />
+    <preference name="StatusBarStyle" value="lightcontent" />
+    <icon src="icon.png" />
+    <icon src="res/icon/android/icon-36-ldpi.png" gap:platform="android" gap:density="ldpi" />
+    <icon src="res/icon/android/icon-48-mdpi.png" gap:platform="android" gap:density="mdpi" />
+    <icon src="res/icon/android/icon-72-hdpi.png" gap:platform="android" gap:density="hdpi" />
+    <icon src="res/icon/android/icon-96-xhdpi.png" gap:platform="android" gap:density="xhdpi" />
+  	<gap:splash src="splash.png" />
+	<gap:splash src="res/screen/android/splash_mdpi.png" gap:platform="android" gap:density="mdpi" />
+	<gap:splash src="res/screen/android/splash_hdpi.png" gap:platform="android" gap:density="hdpi" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <platform name="android">
+        <allow-intent href="market:*" />
+    </platform>
+</widget>

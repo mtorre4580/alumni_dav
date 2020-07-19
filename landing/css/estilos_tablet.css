@@ -1,0 +1,6 @@
+#caracteristicas div{
+	display: flex;
+}
+#caracteristicas div article{
+	width: 50%;
+}

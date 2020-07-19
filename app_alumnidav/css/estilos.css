@@ -1,0 +1,204 @@
+*{  
+    margin: 0;
+    padding: 0;
+    text-shadow: none;
+}
+.titleConsejos{
+    font-family: 'Oswald', sans-serif;
+    padding-top: 1em;
+    text-align: center;
+}
+#fondoConsejos{
+    background-image: url(../img/iconos/libros.png);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 64px 64px;
+    padding-bottom: 2em;
+}
+#sectionTips{
+    padding: 1em;
+}
+.tipsDetalle p{
+    font-family: "Architects Daughter", cursive;
+}
+#centrar{
+    text-align: center;
+}
+.tituloSection{
+    color:#212121;
+    font-family: 'Verdana', sans-serif;
+}
+.parrafoResultado{
+    text-align: center;
+    font-family: "Architects Daughter", cursive;
+}
+.parrafoDetalleAl{
+    font-family: 'Architects Daughter', cursive;
+    padding: 1em;
+}
+.fondoBien{
+    background-image: url(../img/iconos/bien.png);
+    background-repeat: no-repeat;
+    background-position: center 0.5em center 1em;
+    background-size: 64px 64px;
+    padding-top: 5em;
+    background-position: top;
+}
+.fondoMal{
+    background-image: url(../img/iconos/mal.png);
+    background-repeat: no-repeat;
+    background-position: center 0.5em center 1em;
+    background-size: 64px 64px;
+    padding-top: 5em;
+    background-position: top;
+}
+form label,form fieldset legend{
+    font-weight: bold;
+    color: #212121;
+    font-family: 'Oswald', sans-serif;
+}
+.ui-btn.ui-btn-a{
+    background-color: #FF5252 !important;
+    color: #ffffff !important;
+    text-shadow: 0 0 0 !important;
+    border: none !important;
+}
+.contenedorFinal{
+    border-radius: 0.4em !important;
+    margin-bottom: 0.4em !important;
+}
+.contenedorFinal p{
+    font-family: 'Architects Daughter', cursive;
+    padding-top: 0.5em;
+}
+.contenedorArticle{
+    margin-top: 1em;
+    position: relative;
+    background-color: #FFEB3B;
+    box-shadow: 0.4em 0.3em #212121;
+}
+.contenedorArticle span{
+    background-color: #212121;
+    color: #ffffff;
+    right: 1em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding-bottom: 0.2em;
+    padding-top: 0.2em;
+    position: absolute;
+    top: -0.5em;
+}
+.borrarItem{
+    background-color: #212121;
+    color: #ffffff !important;
+    text-decoration: none;
+    right: 1em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding-bottom: 0.2em;
+    padding-top: 0.2em;
+    position: absolute;
+    border-radius: 50%;
+    color: #ffffff;
+    top: -0.5em;
+}
+.contenedorArticle div h1{
+    color: #212121;
+    font-family: 'Oswald', sans-serif;
+}
+.contenedorArticle div p{
+   font-family: 'Architects Daughter', cursive; 
+   padding-top: 1em;
+}
+.contenedorArticle div{
+    background-image: url(../img/iconos/temario.png);
+    background-repeat: no-repeat;
+    background-position: bottom 0.5em right 1em;
+    background-size: 32px 32px;;
+    padding-bottom: 2.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 1.5em;
+}
+.ui-icon-agregar:after{
+    background-image: url(../img/iconos/agregar.png);
+}
+.ui-icon-borrar:after{
+    background-image: url(../img/iconos/borrar.png);
+}
+.ui-icon-volver:after{
+    background-image: url(../img/iconos/volver.png);
+}
+.ui-icon-menu:after{
+    background-image: url(../img/iconos/menu.png);
+}
+.ui-icon-spinner:after{
+    background-image: url(../img/iconos/spinner.png);
+}
+.ui-icon-arriba:after{
+    background-image: url(../img/iconos/arriba.png);
+}
+.ui-icon-abajo:after{
+    background-image: url(../img/iconos/abajo.png);
+}
+.ui-icon-agregar,.ui-icon-menu,.ui-icon-volver,.ui-icon-borrar,.ui-icon-spinner,.ui-icon-info{
+    background-color: transparent !important;
+    box-shadow: none;
+}
+.ui-page .ui-header,.ui-icon-menu{
+    background-color: #1976D2 !important;
+    color: #f5f5f5 !important;
+    text-shadow: 0 0 0 !important;
+}
+#parciales,#finales{
+    padding: 1em;
+}
+.ui-btn-active{
+    background-color: #1976D2 !important;
+}
+.ui-btn-active a{
+    color: #ffffff !important;
+    text-shadow: 0 0 0 !important;
+}
+.ui-tabs{
+    padding: 0 !important;
+}
+.ui-header{
+    border:unset !important;
+}
+.ui-icon-menu,.ui-icon-derecha{
+    background-color: transparent !important;
+    box-shadow: none;
+}
+.ui-btn{ 
+    border: none !important; 
+}
+.headerMenu{
+    background-image: url(../img/iconos/logo.png);
+    background-repeat: no-repeat;
+    background-size: 64px 64px;
+    background-position: center;
+    background-position-y : 0.5em;
+}
+.ui-listview > .ui-li-divider{
+    padding-top: 5em;
+    text-align: center;
+    background-color: #f5f5f5;
+}
+.headerMenu span{
+    color: #1976d2;
+    text-shadow: 0 0 0;
+    font-size: 1.3rem;
+    font-weight: normal;
+}
+.ui-collapsible-set .ui-collapsible:not(.ui-collapsible-inset) .ui-collapsible-heading .ui-btn {
+    background-color: #81C784;
+    color: #ffffff;
+    text-shadow: none !important;
+}
+.ui-collapsible-set .ui-collapsible{
+    padding-bottom: 1em;
+}
+.ui-collapsible-themed-content .ui-collapsible-content{
+    background-color: #e8e8e8 !important;
+}
